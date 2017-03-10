@@ -13,17 +13,13 @@ class PersonController {
     
     static let shared = PersonController()
     
-    var people: [Person]
-    let request: NSFetchRequest<Person>
-    var peopleCopy: [Person]
+    var people: [Person] = []
     var pairs: [[Person]] {
-        return addPairsFromPeople(arraysOfPeople: peopleCopy)
+        return addPairsFromPeople(arraysOfPeople: people)
     }
     
     init() {
-        self.request = Person.fetchRequest()
-        self.people = (try? CoreDataStack.context.fetch(request)) ?? []
-        self.peopleCopy = people
+        fetchFromPersistentStore()
     }
     
     
@@ -33,9 +29,9 @@ class PersonController {
     }
     
     
-    func fetchFromPersistentStore() -> [Person] {
+    func fetchFromPersistentStore() {
         let request: NSFetchRequest<Person> = Person.fetchRequest()
-        return (try? CoreDataStack.context.fetch(request)) ?? []
+        people = (try? CoreDataStack.context.fetch(request)) ?? []
         
     }
     

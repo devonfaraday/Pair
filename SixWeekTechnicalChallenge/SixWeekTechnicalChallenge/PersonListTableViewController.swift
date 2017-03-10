@@ -38,7 +38,7 @@ class PersonListTableViewController: UITableViewController {
     }
     
     @IBAction func randomize(_ sender: Any) {
-        PersonController.shared.peopleCopy.random()
+        PersonController.shared.people.random()
         tableView.reloadData()
     }
     
@@ -56,6 +56,8 @@ class PersonListTableViewController: UITableViewController {
                 let nameTextField = textFields.first,
                 let name = nameTextField.text, !name.isEmpty else { return }
                 PersonController.shared.createPerson(withName: name)
+                let person = Person(name: name)
+                PersonController.shared.people.append(person)
             self.tableView.reloadData()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
