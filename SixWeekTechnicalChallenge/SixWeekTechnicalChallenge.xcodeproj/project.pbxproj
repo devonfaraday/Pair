@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		FD7561951E7304A30059DE3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561941E7304A30059DE3D /* AppDelegate.swift */; };
-		FD7561971E7304A30059DE3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561961E7304A30059DE3D /* ViewController.swift */; };
 		FD75619A1E7304A30059DE3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD7561981E7304A30059DE3D /* Main.storyboard */; };
 		FD75619C1E7304A30059DE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD75619B1E7304A30059DE3D /* Assets.xcassets */; };
 		FD75619F1E7304A30059DE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD75619D1E7304A30059DE3D /* LaunchScreen.storyboard */; };
+		FD7561A71E7305AC0059DE3D /* PersonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561A61E7305AC0059DE3D /* PersonListTableViewController.swift */; };
+		FD7561B01E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */; };
+		FD7561B21E7306530059DE3D /* Person+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B11E7306530059DE3D /* Person+Convenience.swift */; };
+		FD7561B41E73065D0059DE3D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B31E73065D0059DE3D /* CoreDataStack.swift */; };
+		FD7561B61E7306C50059DE3D /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B51E7306C50059DE3D /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FD7561911E7304A30059DE3D /* SixWeekTechnicalChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SixWeekTechnicalChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD7561941E7304A30059DE3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FD7561961E7304A30059DE3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD7561991E7304A30059DE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FD75619B1E7304A30059DE3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD75619E1E7304A30059DE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7561A01E7304A30059DE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD7561A61E7305AC0059DE3D /* PersonListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListTableViewController.swift; sourceTree = "<group>"; };
+		FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SixWeekTechnicalCallenge.xcdatamodel; sourceTree = "<group>"; };
+		FD7561B11E7306530059DE3D /* Person+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Convenience.swift"; sourceTree = "<group>"; };
+		FD7561B31E73065D0059DE3D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		FD7561B51E7306C50059DE3D /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,66 @@
 		FD7561931E7304A30059DE3D /* SixWeekTechnicalChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				FD7561941E7304A30059DE3D /* AppDelegate.swift */,
-				FD7561961E7304A30059DE3D /* ViewController.swift */,
-				FD7561981E7304A30059DE3D /* Main.storyboard */,
-				FD75619B1E7304A30059DE3D /* Assets.xcassets */,
-				FD75619D1E7304A30059DE3D /* LaunchScreen.storyboard */,
-				FD7561A01E7304A30059DE3D /* Info.plist */,
+				FD7561AC1E7305C10059DE3D /* Storyboard */,
+				FD7561AB1E7305C00059DE3D /* Model */,
+				FD7561AA1E7305C00059DE3D /* ModelController */,
+				FD7561A91E7305BF0059DE3D /* ViewController */,
+				FD7561A81E7305BD0059DE3D /* Helpers */,
+				FD7561AD1E7305E40059DE3D /* Resources */,
 			);
 			path = SixWeekTechnicalChallenge;
+			sourceTree = "<group>";
+		};
+		FD7561A81E7305BD0059DE3D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FD7561B31E73065D0059DE3D /* CoreDataStack.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FD7561A91E7305BF0059DE3D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FD7561A61E7305AC0059DE3D /* PersonListTableViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		FD7561AA1E7305C00059DE3D /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				FD7561B51E7306C50059DE3D /* PersonController.swift */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
+		FD7561AB1E7305C00059DE3D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */,
+				FD7561B11E7306530059DE3D /* Person+Convenience.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		FD7561AC1E7305C10059DE3D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				FD7561981E7304A30059DE3D /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		FD7561AD1E7305E40059DE3D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FD75619D1E7304A30059DE3D /* LaunchScreen.storyboard */,
+				FD7561941E7304A30059DE3D /* AppDelegate.swift */,
+				FD75619B1E7304A30059DE3D /* Assets.xcassets */,
+				FD7561A01E7304A30059DE3D /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD7561971E7304A30059DE3D /* ViewController.swift in Sources */,
+				FD7561B41E73065D0059DE3D /* CoreDataStack.swift in Sources */,
+				FD7561A71E7305AC0059DE3D /* PersonListTableViewController.swift in Sources */,
 				FD7561951E7304A30059DE3D /* AppDelegate.swift in Sources */,
+				FD7561B21E7306530059DE3D /* Person+Convenience.swift in Sources */,
+				FD7561B61E7306C50059DE3D /* PersonController.swift in Sources */,
+				FD7561B01E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,8 +366,22 @@
 				FD7561A51E7304A30059DE3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */,
+			);
+			currentVersion = FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */;
+			path = SixWeekTechnicalCallenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FD7561891E7304A30059DE3D /* Project object */;
 }
