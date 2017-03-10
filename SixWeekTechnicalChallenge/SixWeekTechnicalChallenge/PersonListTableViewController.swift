@@ -11,6 +11,10 @@ import UIKit
 class PersonListTableViewController: UITableViewController {
     
     
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Group \([section + 1][0])"
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         if PersonController.shared.people.count % 2 == 0 {
             return PersonController.shared.people.count / 2
@@ -31,6 +35,34 @@ class PersonListTableViewController: UITableViewController {
         cell.textLabel?.text = person.name
         
         return cell
+    }
+    
+    @IBAction func randomize(_ sender: Any) {
+        PersonController.shared.peopleCopy.random()
+        tableView.reloadData()
+    }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        addAlertController()
+    }
+    
+    func addAlertController() {
+        let alertController = UIAlertController(title: "Add Name", message: nil, preferredStyle: .alert)
+        alertController.addTextField { (textField) in
+            textField.placeholder = "Full Name"
+        }
+        let addAction = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let textFields = alertController.textFields,
+                let nameTextField = textFields.first,
+                let name = nameTextField.text, !name.isEmpty else { return }
+                PersonController.shared.createPerson(withName: name)
+            self.tableView.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(addAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
     
 }

@@ -12,15 +12,20 @@ import CoreData
 class PersonController {
     
     static let shared = PersonController()
-    var people = [Person]() {
-        didSet {
-            fetchFromPersistentStore()
-        }
+    
+    var people: [Person]
+    let request: NSFetchRequest<Person>
+    var peopleCopy: [Person]
+    var pairs: [[Person]] {
+        return addPairsFromPeople(arraysOfPeople: peopleCopy)
     }
     
-    var pairs: [[Person]] {
-        return addPairsFromPeople(arraysOfPeople: people)
+    init() {
+        self.request = Person.fetchRequest()
+        self.people = (try? CoreDataStack.context.fetch(request)) ?? []
+        self.peopleCopy = people
     }
+    
     
     func createPerson(withName name: String) {
         let _ = Person(name: name)
@@ -28,9 +33,9 @@ class PersonController {
     }
     
     
-    func fetchFromPersistentStore() {
+    func fetchFromPersistentStore() -> [Person] {
         let request: NSFetchRequest<Person> = Person.fetchRequest()
-        self.people = (try? CoreDataStack.context.fetch(request)) ?? []
+        return (try? CoreDataStack.context.fetch(request)) ?? []
         
     }
     

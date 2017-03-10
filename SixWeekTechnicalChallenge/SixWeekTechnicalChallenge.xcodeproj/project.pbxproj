@@ -12,10 +12,10 @@
 		FD75619C1E7304A30059DE3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD75619B1E7304A30059DE3D /* Assets.xcassets */; };
 		FD75619F1E7304A30059DE3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD75619D1E7304A30059DE3D /* LaunchScreen.storyboard */; };
 		FD7561A71E7305AC0059DE3D /* PersonListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561A61E7305AC0059DE3D /* PersonListTableViewController.swift */; };
-		FD7561B01E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */; };
 		FD7561B21E7306530059DE3D /* Person+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B11E7306530059DE3D /* Person+Convenience.swift */; };
 		FD7561B41E73065D0059DE3D /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B31E73065D0059DE3D /* CoreDataStack.swift */; };
 		FD7561B61E7306C50059DE3D /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B51E7306C50059DE3D /* PersonController.swift */; };
+		FD7561B91E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FD7561B71E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		FD75619E1E7304A30059DE3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD7561A01E7304A30059DE3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD7561A61E7305AC0059DE3D /* PersonListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonListTableViewController.swift; sourceTree = "<group>"; };
-		FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SixWeekTechnicalCallenge.xcdatamodel; sourceTree = "<group>"; };
 		FD7561B11E7306530059DE3D /* Person+Convenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+Convenience.swift"; sourceTree = "<group>"; };
 		FD7561B31E73065D0059DE3D /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		FD7561B51E7306C50059DE3D /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		FD7561B81E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SixWeekTechnicalChallenge.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +99,8 @@
 		FD7561AB1E7305C00059DE3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */,
 				FD7561B11E7306530059DE3D /* Person+Convenience.swift */,
+				FD7561B71E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -199,10 +199,10 @@
 			files = (
 				FD7561B41E73065D0059DE3D /* CoreDataStack.swift in Sources */,
 				FD7561A71E7305AC0059DE3D /* PersonListTableViewController.swift in Sources */,
+				FD7561B91E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodeld in Sources */,
 				FD7561951E7304A30059DE3D /* AppDelegate.swift in Sources */,
 				FD7561B21E7306530059DE3D /* Person+Convenience.swift in Sources */,
 				FD7561B61E7306C50059DE3D /* PersonController.swift in Sources */,
-				FD7561B01E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,13 +371,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FD7561AE1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodeld */ = {
+		FD7561B71E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */,
+				FD7561B81E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodel */,
 			);
-			currentVersion = FD7561AF1E7306330059DE3D /* SixWeekTechnicalCallenge.xcdatamodel */;
-			path = SixWeekTechnicalCallenge.xcdatamodeld;
+			currentVersion = FD7561B81E730DC10059DE3D /* SixWeekTechnicalChallenge.xcdatamodel */;
+			path = SixWeekTechnicalChallenge.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
