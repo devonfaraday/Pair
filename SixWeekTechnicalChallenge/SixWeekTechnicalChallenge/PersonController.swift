@@ -17,14 +17,14 @@ class PersonController {
     var pairs: [[Person]] {
         return addPairsFromPeople(arraysOfPeople: people)
     }
-    
+   
     init() {
         fetchFromPersistentStore()
     }
     
-    
     func createPerson(withName name: String) {
-        let _ = Person(name: name)
+        let person = Person(name: name)
+        people.append(person)
         saveToPersistentStore()
     }
     
@@ -33,6 +33,11 @@ class PersonController {
         let request: NSFetchRequest<Person> = Person.fetchRequest()
         people = (try? CoreDataStack.context.fetch(request)) ?? []
         
+    }
+    
+    func saveRandomList() {
+        people.random()
+        saveToPersistentStore()
     }
     
     func saveToPersistentStore() {
