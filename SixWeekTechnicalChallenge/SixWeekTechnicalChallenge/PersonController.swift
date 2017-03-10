@@ -18,6 +18,9 @@ class PersonController {
         }
     }
     
+    var pairs: [[Person]] {
+        return addPairsFromPeople(arraysOfPeople: people)
+    }
     
     func createPerson(withName name: String) {
         let _ = Person(name: name)
@@ -39,5 +42,18 @@ class PersonController {
             NSLog("Error: \(error.localizedDescription)\n Error Saving")
         }
         print("Saving was successful")
+    }
+    
+    func addPairsFromPeople(arraysOfPeople: [Person]) -> [[Person]] {
+        let splitSize = 2
+        let sectionsOfPeople = stride(from: 0, to: arraysOfPeople.count, by: splitSize).map { Array(arraysOfPeople[$0..<min($0 + splitSize, arraysOfPeople.count)]) }
+        return sectionsOfPeople
+    }
+    
+    
+}
+extension Array {
+    mutating func random() {
+        for _ in 0..<20 { sort { (_,_) in arc4random() < arc4random() } }
     }
 }
